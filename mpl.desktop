@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=mpl.lua
+Comment=Simple mplayer launcher
+Exec=mpl.lua
+Icon=mplayer.png
+Type=Application
+Terminal=false
+

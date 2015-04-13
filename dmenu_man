@@ -1,0 +1,2 @@
+cmd=$( apropos . | awk '{print $1}' | dmenu)
+$TERM -e "man $cmd"
