@@ -1,8 +1,9 @@
 [Desktop Entry]
-Name=mpl.lua
+Name=mpl
 Comment=Simple mplayer launcher
-Exec=mpl.lua
+Exec=mpl
 Icon=mplayer.png
 Type=Application
+Category=AudioVideo
 Terminal=false
 
