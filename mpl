@@ -24,7 +24,7 @@ function exec(cmd)
   local file = io.popen(cmd)
   return file:read('a'):sub(1, -2) -- strip '\n'
 end
--- TODO: debug loop
+
 -- TODO: file selection should not pop up again afer user quits mplayer
 while 1 do
   local files = exec('zenity --file-selection --multiple --filename="$HOME/"')
