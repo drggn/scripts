@@ -26,6 +26,7 @@ function exec(cmd)
 end
 
 -- TODO: file selection should not pop up again afer user quits mplayer
+-- TODO: escape special chars
 while 1 do
   local files = exec('zenity --file-selection --multiple --filename="$HOME/"')
   if files == "" then

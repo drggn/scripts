@@ -4,6 +4,6 @@ Comment=Simple mplayer launcher
 Exec=mpl
 Icon=mplayer.png
 Type=Application
-Category=AudioVideo;Player
+Categories=AudioVideo;Player
 Terminal=false
 
