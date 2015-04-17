@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=mpdf
+Comment=Graphical mupdf launcher
+Exec=mpdf
+Icon=pdf.png
+Type=Application
+Categories=Office;Viewer
+Terminal=false
