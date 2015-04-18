@@ -26,12 +26,14 @@ function exec(cmd)
 end
 
 -- TODO: file selection should not pop up again afer user quits mplayer
--- TODO: escape special chars
 while 1 do
   local files = exec('zenity --file-selection --multiple --filename="$HOME/"')
   if files == "" then
     break
   end
-  local str = split(files, '|')
-  os.execute(command .. ' "' .. table.concat(str, '" "')..'"')
+  local names = split(files, '|')
+  for k,v in pairs(names)
+    names[k] = v:gsub('"', '\\%1')
+  end
+  os.execute(command .. ' "' .. table.concat(names, '" "')..'"')
 end

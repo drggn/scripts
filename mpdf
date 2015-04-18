@@ -11,5 +11,6 @@ function exec(cmd)
 end
 
 -- TODO: escape special chars
- local file = exec('zenity --file-selection --filename="$HOME/"')
- os.execute(command .. ' "' .. file .. '"')
+local file = exec('zenity --file-selection --filename="$HOME/"')
+file = file:gsub('"', '\\%1')
+os.execute(command .. ' "' .. file .. '"')
