@@ -4,6 +4,7 @@
 -- for files to play with mplayer
 
 local command = 'mplayer'
+local directory = '$HOME/'
 
 function split(str, sep)
   local st = 1
@@ -27,13 +28,17 @@ end
 
 -- TODO: file selection should not pop up again afer user quits mplayer
 while 1 do
-  local files = exec('zenity --file-selection --multiple --filename="$HOME/"')
+  local files =
+	exec('zenity --file-selection --multiple --filename="'.. directory ..'"')
   if files == "" then
     break
   end
   local names = split(files, '|')
-  for k,v in pairs(names)
+  -- escape all double quotes
+  for k,v in pairs(names) do
     names[k] = v:gsub('"', '\\%1')
   end
+  _, _, directory = names[1]:find('(/*.*/)')
+  print('DIR: ' .. directory)
   os.execute(command .. ' "' .. table.concat(names, '" "')..'"')
 end
