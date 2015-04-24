@@ -39,6 +39,6 @@ while 1 do
     names[k] = v:gsub('"', '\\%1')
   end
   _, _, directory = names[1]:find('(/*.*/)')
-  print('DIR: ' .. directory)
+  directory = directory:gsub('"', '\\%1')
   os.execute(command .. ' "' .. table.concat(names, '" "')..'"')
 end
