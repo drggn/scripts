@@ -1,4 +1,4 @@
 #!/bin/sh
 
-cmd=$( apropos . | awk '{print $1}' | dmenu)
-$TERM -e "man $cmd"
+cmd=$(apropos . | awk '{print $1}' | dmenu)
+$MANTERM -e "man $cmd"

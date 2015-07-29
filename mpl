@@ -3,7 +3,7 @@
 -- pops up a zenity file-selection to ask
 -- for files to play with mplayer
 
-local command = 'mplayer'
+local command = 'mplayer -af volnorm'
 local directory = '$HOME/'
 
 function split(str, sep)
