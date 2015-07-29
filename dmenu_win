@@ -3,5 +3,4 @@
 win=$(wmctrl -l |
     awk '$2 != -1 {print substr($0, index($0, $4))}'|
     dmenu -i)
-echo $win
 wmctrl -a $win
