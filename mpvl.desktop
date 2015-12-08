@@ -1,8 +1,8 @@
 [Desktop Entry]
-Name=mpl
-Comment=Simple mplayer launcher
-Exec=mpl
-Icon=mplayer.png
+Name=mpvl
+Comment=Simple mpv launcher
+Exec=mpvl
+Icon=mpv.png
 Type=Application
 Categories=AudioVideo;Player
 Terminal=false

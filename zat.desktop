@@ -1,7 +1,7 @@
 [Desktop Entry]
-Name=mpdf
-Comment=Graphical mupdf launcher
-Exec=mpdf
+Name=zat
+Comment=Graphical zathura launcher
+Exec=zat
 Icon=pdf.png
 Type=Application
 Categories=Office;Viewer

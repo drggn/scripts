@@ -1,9 +1,9 @@
 #!/usr/bin/env lua
 -- mpl.lua
 -- pops up a zenity file-selection to ask
--- for files to play with mplayer
+-- for files to play with mpv
 
-local command = 'mplayer -af volnorm'
+local command = 'mpv -af=drc'
 local directory = '$HOME/'
 
 function split(str, sep)
@@ -23,10 +23,9 @@ end
 
 function exec(cmd)
   local file = io.popen(cmd)
-  return file:read('a'):sub(1, -2) -- strip '\n'
+  return file:read('*a'):sub(1, -2) -- strip '\n'
 end
 
--- TODO: file selection should not pop up again afer user quits mplayer
 while 1 do
   local files =
 	exec('zenity --file-selection --multiple --filename="'.. directory ..'"')
